@@ -23,12 +23,14 @@ Clone the repository and build the tool:
 ```sh
 git clone https://github.com/MazX0p/CobaltSentry.git
 cd CobaltSentry
+go mod init CobaltSentry
 go mod tidy
+
 ```
 
 Build the executable:
 ```sh
-go build -o CobaltSentry.exe
+GOOS=windows GOARCH=amd64 go build -o CobaltSentry.exe CobaltSentry.go
 ```
 
 ## Usage
